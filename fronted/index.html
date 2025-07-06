@@ -1,0 +1,160 @@
+<!-- # Pizza & Drinks Box - Main Page HTML Documentation
+
+## Overview
+This HTML document represents the main page of the "Pizza & Drinks Box" website. It features sections for displaying pizzas, drinks, a shopping cart, and a delivery & payment form. The page includes navigation links, legends for icons, and a footer.
+
+---
+
+## Document Structure
+
+### Head
+- **Charset:** UTF-8 for universal character support.
+- **Viewport:** Responsive design for mobile devices.
+- **Title:** "Pizza & Drinks Box"
+- **Stylesheet:** External CSS file linked as `style.css`.
+
+### Body
+
+- **Navigation Links:**  
+  Two anchor links at the top:  
+  - "About Us" linking to `about.html`  
+  - "Menu" linking to `menu/menu.html`
+
+- **Main Heading:**  
+  `<h1>` with the text "Pizza & Drinks Box".
+
+- **Pizzas Section:**  
+  - `<h2>` titled "Pizzas".  
+  - `<div>` with ID `pizza-list` where pizza items will be dynamically inserted by JavaScript.
+
+- **Drinks Section:**  
+  - `<h2>` titled "Drinks".  
+  - `<div>` with ID `drink-list` and class `grid-container` where drink items will be dynamically inserted.
+
+- **Cart Section:**  
+  - `<h2>` titled "Cart".  
+  - `<ul>` with ID `cart-items` to list selected items in the cart.  
+  - Paragraph showing total price, with the amount inside a `<span>` with ID `total`, initially set to 0.00 €.
+
+- **Delivery & Payment Form:**  
+  - Form with ID `order-form` for customer delivery and payment details.  
+  - Fields include:  
+    - Name (required)  
+    - Address (required)  
+    - Phone Number (required)  
+    - Payment Method (required select dropdown with options: "Cash on Delivery" and "Credit Card")  
+  - Conditional credit card fields (`div` with ID `credit-card-info`, initially hidden) that appear only if "Credit Card" is selected, including:  
+    - Card Number (16-digit pattern)  
+    - Expiry Date (month selector, minimum January 2023)  
+    - CVV (3-digit pattern)
+
+- **Order Message:**  
+  - `<div>` with ID `order-message` for displaying feedback or confirmation messages after form submission.
+ -->
+<!-- - **Legend:**  
+  - Explains icons used on the site:  
+    - 🌱 indicates Vegetarian options  
+    - 🚫🍬 indicates Sugar-free options
+
+- **Footer:**  
+  - Centered text with copyright notice for the year 2025.
+
+---
+
+## Summary
+This HTML page is designed as a responsive and interactive ordering platform for a pizza and drinks business, with clear navigation, detailed product listings, and an intuitive order submission form. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza & Drinks Box</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<body>
+ <a href="about.html" id="about-btn" class="nav-link">About Us</a>
+ <a href="menu/menu.html" class="nav-link">Menu</a>
+
+  <h1>Pizza & Drinks Box</h1>
+
+  <h2>Pizzas</h2>
+  <div id="pizza-list"></div>
+
+  <h2>Drinks</h2>
+<div id="drink-list" class="grid-container"></div>
+
+
+  <h2>Cart</h2>
+  <ul id="cart-items"></ul>
+
+  <p><strong>Total:</strong> €<span id="total">0.00</span></p>
+
+  <h2>Delivery & Payment</h2>
+<form id="order-form">
+  <label>
+    Name:<br>
+    <input type="text" id="customer-name" required>
+  </label><br><br>
+
+  <label>
+    Address:<br>
+    <input type="text" id="customer-address" required>
+  </label><br><br>
+
+  <label>
+    Phone Number:<br>
+    <input type="tel" id="customer-phone" required>
+  </label><br><br>
+
+  <label for="payment-method">Payment Method:</label><br>
+<select id="payment-method" name="payment-method" required>
+  <option value="">Select...</option>
+  <option value="cash">Cash on Delivery</option>
+  <option value="card">Credit Card</option>
+</select>
+
+<div id="credit-card-info" style="display:none; margin-top: 10px;">
+  <label>
+    Card Number:<br>
+    <input type="text" id="card-number" pattern="\d{16}" maxlength="16" placeholder="1234 5678 9012 3456">
+  </label><br><br>
+
+  <label>
+    Expiry Date:<br>
+    <input type="month" id="card-expiry" min="2023-01" placeholder="MM/YYYY">
+  </label><br><br>
+
+  <label>
+    CVV:<br>
+    <input type="text" id="card-cvv" pattern="\d{3}" maxlength="3" placeholder="123">
+  </label><br><br>
+</div>
+
+
+
+    </select>
+  </label><br><br>
+
+  <button type="submit">Place Order</button>
+</form>
+
+<div id="order-message" style="margin-top: 20px; font-weight: bold;"></div>
+
+<div id="legend" style="margin-top: 30px; padding: 10px; border-top: 1px solid #ccc; font-size: 14px;">
+  <strong>Legend:</strong><br>
+  <span>🌱 - Vegetarian</span><br>
+  <span>🚫🍬 - Sugar-free</span>
+</div>
+
+<footer style="text-align:center; margin-top:40px; padding:10px; color:#777; font-size:14px;">
+  &copy; 2025 Pizza & Drinks Box. All rights reserved.
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center; /* Center text in the entire body */
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  color: #d62828;
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Section subtitles (Pizzas, Drinks, Cart) */
+h2 {
+  text-align: center;
+  color: #003049;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  text-align: center; /* Center the content inside each item */
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+}
+
+#total {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+/* Layout for drinks in a grid */
+#drink-list.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#credit-card-info label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#credit-card-info input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#order-form {
+  max-width: 400px;     /* Maximum width of the form */
+  margin: 0 auto;       /* Horizontal centering of the form */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#order-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+#order-form input,
+#order-form select {
+  width: 100%;       /* The input field fills the entire width of the label */
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.vegetarian-label {
+  color: green;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.sugarfree-label {
+  color: blue;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+#legend {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+#legend span {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+/* Navigation link styled as a button */
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6347;  /* Tomato red*/
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 20px;
+}
+
+.nav-link:hover {
+  background-color: #e5533d;  /* Darker red on hover */
+  transform: scale(1.05);
+}
+

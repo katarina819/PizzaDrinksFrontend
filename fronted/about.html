@@ -1,0 +1,95 @@
+<!-- ### Pizza & Drinks Box - About Page Documentation
+
+This is the "About" page of the Pizza & Drinks Box website. It provides visitors with information about the company, contact details, opening hours, location via embedded Google Maps, and customer satisfaction metrics.
+
+**HTML Structure Overview:**
+
+- **Header:**  
+  Contains a navigation bar with links to "Home" and "Menu" pages to facilitate user navigation.
+
+- **Main Title:**  
+  The page’s main heading clearly indicates it is the About page.
+
+- **Company Overview Section:**  
+  Provides a brief introduction to the company’s history, founding year (2010), and its mission to deliver fresh pizzas and drinks with fast and friendly service.
+
+- **Contact Information Section:**  
+  Lists the physical address, phone number, email address, and detailed opening hours for each day of the week.
+
+- **Location Section:**  
+  Embeds a Google Map iframe showing the company’s location (currently set to New York City as a placeholder). The iframe is optimized for accessibility with a descriptive title and supports lazy loading.
+
+- **Customer Satisfaction Section:**  
+  Displays key statistics such as the number of satisfied customers (500+) and the average customer rating (5.0 / 5.0), represented visually with star emojis.
+
+- **Footer:**  
+  Simple footer that includes copyright information for the year 2025.
+
+
+This page is designed to be clean, user-friendly, and informative, providing all necessary details for visitors interested in learning more about the Pizza & Drinks Box company. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Pizza & Drinks Box</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu/menu.html">Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <h1>About Pizza & Drinks Box</h1>
+
+  <div class="info-section">
+    <h2>Company Overview</h2>
+    <p>Pizza & Drinks Box was founded in 2010 with the goal to deliver fresh and delicious pizzas and drinks to our customers with fast and friendly service.</p>
+  </div>
+
+  <div class="info-section">
+  <h2>Contact Information</h2>
+  <p><strong>Address:</strong> 123 Main Street, Food City, FC 45678</p>
+  <p><strong>Phone:</strong> +123 456 7890</p>
+  <p><strong>Email:</strong> contact@pizzadrinksbox.com</p>
+  <h3>Opening Hours</h3>
+  <ul>
+    <li>Monday – Friday: 10:00 AM – 10:00 PM</li>
+    <li>Saturday: 12:00 PM – 11:00 PM</li>
+    <li>Sunday: 12:00 PM – 9:00 PM</li>
+  </ul>
+</div>
+
+
+  <div class="info-section">
+    <h2>Our Location</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.757580278492!2d-74.00601528459449!3d40.71277577933079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316d8ca1eb%3A0x46e7c1a936c2de2f!2sNew%20York%20City!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+      allowfullscreen=""
+      loading="lazy"
+      title="Company Location"
+    ></iframe>
+  </div>
+
+  <div class="info-section">
+    <h2>Customer Satisfaction</h2>
+    <p class="stats">Satisfied Customers: <strong>500+</strong></p>
+    <p class="stats">Average Rating: <strong>5.0 / 5.0</strong> ⭐⭐⭐⭐⭐</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Pizza & Drinks Box</p>
+  </footer>
+
+  <script src="about.js"></script>
+</body>
+</html>

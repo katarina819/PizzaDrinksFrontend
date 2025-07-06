@@ -1,0 +1,64 @@
+<!--
+  Pizza & Drinks Menu Webpage
+  ---------------------------
+
+  Description:
+  This HTML file renders a menu page for "Pizza & Drinks Box" featuring sections for pizzas and drinks.
+  It dynamically loads menu items into two grids for pizzas and drinks, respectively.
+
+  Structure:
+  - <header>: Contains the main page title and navigation links to Home and About Us pages.
+  - <main>: Includes two sections:
+      * Pizzas: A grid container with id="pizza-menu" to display pizza items.
+      * Drinks: A grid container with id="drink-menu" to display drink items.
+  - <div id="legend">: Displays icons legend explaining vegetarian and sugar-free symbols.
+  - <footer>: Shows copyright information.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pizza & Drinks Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+    
+
+  <header>
+    <h1>🍕 Pizza & Drinks Menu 🥤</h1>
+    <nav>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About Us</a>
+</nav>
+
+  </header>
+
+
+  <main>
+    <section>
+      <h2>Pizzas</h2>
+      <div id="pizza-menu" class="menu-grid"></div>
+    </section>
+
+    <section>
+      <h2>Drinks</h2>
+      <div id="drink-menu" class="menu-grid"></div>
+    </section>
+  </main>
+
+  <div id="legend" style="margin-top: 30px; padding: 10px; border-top: 1px solid #ccc; font-size: 14px;">
+  <strong>Legend:</strong><br>
+  <span>🌱 - Vegetarian</span><br>
+  <span>🚫🍬 - Sugar-free</span>
+</div>
+
+  <footer>
+    <p>&copy; 2025 Pizza & Drinks Box</p>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>
